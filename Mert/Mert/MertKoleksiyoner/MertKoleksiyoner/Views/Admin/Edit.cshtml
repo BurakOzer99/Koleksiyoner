@@ -1,0 +1,84 @@
+﻿@model MertKoleksiyoner.Models.Araba
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+<div class="content-page">
+    <div class="content">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title">Araçlar Edit</h4>
+                            <p class="sub-header">
+
+                                <img src="~/Content/assets/images/Araba/@Model.Image"
+                                     class="img-fluid avatar-lg rounded" />
+                            </p>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+
+                                        <div class="mb-3">
+                                            <label for="image" class="form-label">Araç Resmi</label>
+                                            <input type="file" id="image" name="image" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="carName" class="form-label">Car Name</label>
+                                            <input type="text" id="carName" name="carName" value="@Model.carName" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="carModel" class="form-label">Car Model</label>
+                                            <input type="text" id="carModel" name="carModel" value="@Model.carModel" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="carColor" class="form-label">Car Color</label>
+                                            <input type="text" id="carColor" name="carColor" value="@Model.carColor" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="carYear" class="form-label">Car Year</label>
+                                            <input type="text" id="carYear" name="carYear" value="@Model.carYear" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="carCompany" class="form-label">Company</label>
+                                            <input type="text" id="carCompany" name="carCompany" value="@Model.carCompany" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="IsActive" class="form-label">Is Active</label>
+                                            <input type="checkbox" id="IsActive" name="IsActive" class="form-check-input"
+                                                   value="true" data-val="true" checked=" @Model.IsActive">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-dark">Save</button>
+                                    </form>
+                                </div> <!-- end col -->
+                            </div>
+                            <!-- end row-->
+
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card -->
+                </div><!-- end col -->
+            </div>
+
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+    <!-- Footer Start -->
+    <!-- end Footer -->
+
+</div>
